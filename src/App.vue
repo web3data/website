@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <Header />
     <router-view />
     <Footer />
@@ -35,7 +35,12 @@ export default {
 @import './scss/main.scss';
 
 body {
-  background: #f9f9f9;
+  background: transparentize($color3, 0.3);
+  background: linear-gradient(
+    141deg,
+    transparentize($color3, 1) 0%,
+    transparentize($color3, 0.3) 100%
+  );
   padding: 0;
   margin: 0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -47,5 +52,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 </style>

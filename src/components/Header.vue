@@ -3,7 +3,7 @@
     <div class="header-wrap">
       <div class="logo">
         <router-link :to="{name: 'Home'}" tag="a">
-          <img src="/static/logo.svg" alt="">
+          <img src="/static/web3data_logo_bug_color_v1.svg" alt="">
         </router-link>
       </div>
 
