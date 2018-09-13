@@ -35,6 +35,7 @@ export default {
 @import './scss/main.scss';
 
 body {
+  background: #f9f9f9;
   padding: 0;
   margin: 0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

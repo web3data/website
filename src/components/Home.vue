@@ -15,6 +15,8 @@
       <div class="grid">
         <div class="grid-column">
           <div class="card-portrait">
+            <div class="bg-img bg-1" />
+            <div class="bg-img ol-1" />
             <h1>Economic Driven Data</h1>
             <p>Participants may earn tokens for collecting, forwarding and validating public blockchain data to Amberdata’s or other service providers’ ingestion APIs</p>
           </div>
@@ -22,10 +24,14 @@
 
         <div class="grid-column">
           <div class="card-portrait">
+            <div class="bg-img bg-2" />
+            <div class="bg-img ol-1" />
             <h1>Network Sourced Data</h1>
             <p>Community data listed in the marketplace and made available via API or bulk download is expected to be monetized by the data provider receiving payments in tokens.</p>
           </div>
           <div class="card-portrait">
+            <div class="bg-img bg-3" />
+            <div class="bg-img ol-1" />
             <h1>Curated Data Sets</h1>
             <p>Low friction peer-to-peer mechanisms to publish, consume and monetize blockchain, custom and curated datasets</p>
           </div>
@@ -33,6 +39,8 @@
 
         <div class="grid-column">
           <div class="card-portrait">
+            <div class="bg-img bg-4" />
+            <div class="bg-img ol-1" />
             <h1>Decentralized Validated Information</h1>
             <p>A blockchain data marketplace is global value proposition and flattens the world enabling peer-to-peer commerce on a global scale.</p>
           </div>
@@ -102,6 +110,7 @@ export default {
   border-radius: 6px;
   box-shadow: 0 1px 20px -5px rgba(0, 0, 0, 0.3);
   padding: 20px;
+  position: relative;
   margin: auto;
   display: flex;
   justify-content: flex-end;
@@ -119,6 +128,8 @@ export default {
   p {
     color: $white;
     margin: 0;
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -154,7 +165,7 @@ export default {
 
   &:after {
     position: absolute;
-    background: $white;
+    background: #f9f9f9;
     content: '';
     width: calc(100vw + 100px);
     height: 500px;
@@ -174,6 +185,8 @@ export default {
 
 .cta-form {
   background: $color2;
+  border-top: 2px dashed #f9f9f9;
+  border-bottom: 2px dashed darken($color2, 10%);
   display: flex;
   justify-content: center;
   padding: 120px 0;
@@ -234,6 +247,45 @@ export default {
       margin: auto;
       padding: 20px 30px;
     }
+  }
+}
+
+.bg-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0;
+  content: '';
+  background-size: cover;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &.bg-1 {
+    background: url('/static/stairs.jpg') 50% 50% no-repeat;
+  }
+
+  &.bg-2 {
+    background: url('/static/coffee.jpg') 50% 50% no-repeat;
+  }
+
+  &.bg-3 {
+    background: url('/static/server.jpg') 50% 50% no-repeat;
+  }
+
+  &.bg-4 {
+    background: url('/static/block.jpg') 50% 50% no-repeat;
+  }
+
+  &.ol-1 {
+    background: transparentize($color3, 0.3);
+    background: linear-gradient(
+      141deg,
+      rgba(14, 183, 164, 0.9) 0%,
+      rgba(0, 35, 31, 0.9) 100%
+    );
+    z-index: 1;
   }
 }
 </style>
