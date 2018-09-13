@@ -8,9 +8,9 @@
       </div>
 
       <div class="header-menu">
-        <router-link :to="{name: 'list'}" tag="a">
+        <!-- <router-link :to="{name: 'list'}" tag="a">
           <span>Menu</span>
-        </router-link>
+        </router-link> -->
       </div>
     </div>
 
@@ -27,6 +27,7 @@ export default {
 @import '../scss/variables';
 
 .header-bar {
+  box-shadow: 0 0 20px -4px transparentize($black, 0.8);
   color: $color1;
   display: flex;
   flex-direction: row;
@@ -38,7 +39,7 @@ export default {
 
 .logo {
   position: relative;
-  font-family: monospace, sans-serif;
+  margin: 0 0 5px;
 
   a {
     display: block;

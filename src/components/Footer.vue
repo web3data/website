@@ -1,5 +1,5 @@
 <template>
-  <div>&copy; Web3Data {{ year }}</div>
+  <div>&copy; Web3Data Foundation {{ year }}</div>
 </template>
 
 <script>
