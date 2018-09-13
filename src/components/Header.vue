@@ -8,6 +8,9 @@
       </div>
 
       <div class="header-menu">
+        <a href="mailto:hello@web3data.org">
+          <span>Contact Us</span>
+        </a>
         <!-- <router-link :to="{name: 'list'}" tag="a">
           <span>Menu</span>
         </router-link> -->
@@ -61,7 +64,6 @@ export default {
 
 .header-menu {
   display: flex;
-  display: none;
 
   a {
     color: $color1;
