@@ -35,12 +35,6 @@ export default {
 @import './scss/main.scss';
 
 body {
-  background: transparentize($color3, 0.3);
-  background: linear-gradient(
-    141deg,
-    transparentize($color3, 1) 0%,
-    transparentize($color3, 0.3) 100%
-  );
   padding: 0;
   margin: 0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
