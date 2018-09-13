@@ -42,7 +42,13 @@
 
     <section class="cta-form">
       <div class="cta-card">
-        <h1>TODO: GForm</h1>
+        <div class="copy">
+          <h1>Invest in Web3Data</h1>
+          <h3>Gain early access to the token sale. Get validated as an investor</h3>
+        </div>
+        <div class="action">
+          <button class="btn">Request Access</button>
+        </div>
       </div>
 
       <div class="bk-doodle">
@@ -123,6 +129,7 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
+  margin: 0 20px;
 }
 
 .grid-column {
@@ -169,7 +176,7 @@ export default {
   background: $color2;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 120px 0;
   position: relative;
   width: 100vw;
   overflow-x: hidden;
@@ -190,11 +197,43 @@ export default {
     border-radius: 8px;
     box-shadow: 0 1px 10px -2px rgba(0, 0, 0, 0.3);
     border: 3px dotted rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    display: flex;
+    padding: 40px;
     position: relative;
     margin: auto 0;
-    // width: 100%;
     z-index: 10;
+
+    h1,
+    h3 {
+      margin: 0;
+      text-align: left;
+    }
+
+    h1 {
+      color: $color1;
+      font-size: 24pt;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 400;
+    }
+
+    .copy {
+      margin-right: 60px;
+    }
+
+    .action {
+      display: flex;
+    }
+
+    .btn {
+      background: $color1;
+      border-radius: 4px;
+      color: $white;
+      margin: auto;
+      padding: 20px 30px;
+    }
   }
 }
 </style>

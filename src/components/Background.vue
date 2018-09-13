@@ -102,15 +102,18 @@ body {
 
 .anim {
   position: absolute;
-  left: 0;
+  // left: 0;
   top: 0;
-  right: 0;
+  // right: 0;
+  // bottom: 0;
   opacity: 0.6;
   filter: saturate(0.2);
   width: 100%;
   z-index: -1;
   overflow: hidden;
-  max-height: 100vh;
+  // max-height: 100vh;
+  min-height: 100vh;
+  // width: 100vw;
 
   svg {
     position: relative;

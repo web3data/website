@@ -15,9 +15,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../scss/variables';
+
 div {
+  background: darken($color2, 10%);
+  color: $white;
   font-size: 11pt;
-  margin: 40px 0px 20px;
+  padding: 40px 0px 30px;
   text-align: center;
 }
 </style>
