@@ -4,32 +4,16 @@
     <section class="intro">
       <Background />
 
-      <div class="background-stripe">
-        <svg width="1024px" height="703px" viewBox="0 0 1024 703" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <linearGradient x1="93.4327689%" y1="2.14089079%" x2="28.1334915%" y2="97.5362873%" id="linearGradient-1">
-              <stop stop-color="#269883" stop-opacity="0.1" offset="0%"/>
-              <stop stop-color="#269883" stop-opacity="0.6" offset="100%"/>
-            </linearGradient>
-          </defs>
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g fill="url(#linearGradient-1)" fill-rule="nonzero">
-              <polygon points="706 -3.41060513e-13 1277.87154 -3.41060513e-13 564 703 0 703"/>
-            </g>
-          </g>
-        </svg>
-      </div>
-
       <div class="card">
-        <img class="logo" src="/static/web3data_logo_type_v1.svg" alt="">
-        <h3>The Decentralized Data Marketplace</h3>
-        <!-- <p>The ecosystem will include a variety of smart contracts, adopt a utility token Web3data for various transactions and provide various new software applications that allow participants to interact with the ecosystem.</p> -->
+        <img class="logo" src="/static/web3data.org.svg" alt="">
+        <h1 class="pg-title">web3data.org</h1>
+        <h3>The Blockchain Data Nexus</h3>
       </div>
     </section>
 
     <section class="features">
       <div class="grid">
-        <div class="grid-column">
+        <div class="grid-column grid-cl-1">
           <div class="card-portrait">
             <div class="bg-img bg-1" />
             <div class="bg-img ol-1" />
@@ -38,7 +22,7 @@
           </div>
         </div>
 
-        <div class="grid-column">
+        <div class="grid-column grid-cl-2">
           <div class="card-portrait">
             <div class="bg-img bg-2" />
             <div class="bg-img ol-1" />
@@ -53,7 +37,7 @@
           </div>
         </div>
 
-        <div class="grid-column">
+        <div class="grid-column grid-cl-3">
           <div class="card-portrait">
             <div class="bg-img bg-4" />
             <div class="bg-img ol-1" />
@@ -113,10 +97,10 @@ export default {
 }
 
 .card {
-  margin: auto 30vw auto auto;
+  margin: 30vh auto;
   position: relative;
   z-index: 10;
-  text-align: right;
+  text-align: center;
 
   p {
     max-width: 35vw;
@@ -148,7 +132,7 @@ export default {
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 50vh;
+  min-height: 30vh;
   text-align: left;
 
   h1 {
@@ -166,7 +150,13 @@ export default {
 }
 
 .logo {
-  width: 320px;
+  width: 21vw;
+  min-width: 200px;
+}
+
+.pg-title {
+  text-indent: -9999px;
+  font-size: 0px;
 }
 
 .grid {
@@ -199,16 +189,17 @@ export default {
     position: absolute;
     background: #f9f9f9;
     content: '';
-    width: calc(100vw + 100px);
+    width: calc(100vw + 300px);
     height: 500px;
-    transform: rotate(-3deg);
-    left: -30px;
-    top: 85vh;
+    transform: rotate(10deg);
+    left: -150px;
+    top: 75vh;
   }
 }
 
 .features {
   padding: 50px 0;
+  margin-top: -30vh;
 
   .card-portrait {
     margin: 20px;
@@ -318,6 +309,55 @@ export default {
       rgba(0, 35, 31, 0.9) 100%
     );
     z-index: 1;
+  }
+}
+
+// Tablet
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-cl-1 {
+    order: 1;
+    flex: 1 1 50%;
+  }
+  .grid-cl-2 {
+    order: 3;
+    flex-direction: row;
+  }
+  .grid-cl-3 {
+    order: 2;
+    flex: 1 1 50%;
+  }
+
+  .card-portrait {
+    flex: 1 1 50%;
+  }
+}
+
+// Mobile
+@media screen and (max-width: $tablet - 1px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-cl-1 {
+    order: 1;
+    flex: 1 1 100%;
+  }
+  .grid-cl-2 {
+    order: 3;
+  }
+  .grid-cl-3 {
+    order: 2;
+    flex: 1 1 100%;
+  }
+
+  .card-portrait {
+    flex: 1 1 100%;
   }
 }
 </style>
