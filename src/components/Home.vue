@@ -6,8 +6,8 @@
 
       <div class="card">
         <img class="logo" src="/static/web3data.org.svg" alt="">
+        <h1 class="pg-title">web3data.org</h1>
         <h3>The Blockchain Data Nexus</h3>
-        <!-- <p>The ecosystem will include a variety of smart contracts, adopt a utility token Web3data for various transactions and provide various new software applications that allow participants to interact with the ecosystem.</p> -->
       </div>
     </section>
 
@@ -152,6 +152,11 @@ export default {
 .logo {
   width: 21vw;
   min-width: 200px;
+}
+
+.pg-title {
+  text-indent: -9999px;
+  font-size: 0px;
 }
 
 .grid {
