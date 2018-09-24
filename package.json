@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postbuild": "[ ! -f ./dist/_redirects ] && cp _redirects ./dist/_redirects || exit 0",
     "dev": "node scripts/dev-server.js",
-    "start": "npm run dev",
+    "start": "node index",
     "build": "node scripts/build.js",
     "test": "",
     "lint": "eslint --ext .js,.vue --ignore-path .eslintignore .",
@@ -17,6 +16,7 @@
   "license": "Apache",
   "dependencies": {
     "animejs": "^2.2.0",
+    "express": "^4.16.3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

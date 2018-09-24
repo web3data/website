@@ -22,7 +22,7 @@ export default {
     $route(to) {
       if (!window.gtag) return
       // update google analytics
-      window.gtag('config', 'UA-TODO-ADDTHIS', {
+      window.gtag('config', 'UA-126384659-1', {
         page_title: to.name,
         page_path: to.fullPath
       })
