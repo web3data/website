@@ -13,7 +13,7 @@
 
     <section class="features">
       <div class="grid">
-        <div class="grid-column">
+        <div class="grid-column grid-cl-1">
           <div class="card-portrait">
             <div class="bg-img bg-1" />
             <div class="bg-img ol-1" />
@@ -22,7 +22,7 @@
           </div>
         </div>
 
-        <div class="grid-column">
+        <div class="grid-column grid-cl-2">
           <div class="card-portrait">
             <div class="bg-img bg-2" />
             <div class="bg-img ol-1" />
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class="grid-column">
+        <div class="grid-column grid-cl-3">
           <div class="card-portrait">
             <div class="bg-img bg-4" />
             <div class="bg-img ol-1" />
@@ -309,6 +309,55 @@ export default {
       rgba(0, 35, 31, 0.9) 100%
     );
     z-index: 1;
+  }
+}
+
+// Tablet
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-cl-1 {
+    order: 1;
+    flex: 1 1 50%;
+  }
+  .grid-cl-2 {
+    order: 3;
+    flex-direction: row;
+  }
+  .grid-cl-3 {
+    order: 2;
+    flex: 1 1 50%;
+  }
+
+  .card-portrait {
+    flex: 1 1 50%;
+  }
+}
+
+// Mobile
+@media screen and (max-width: $tablet - 1px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-cl-1 {
+    order: 1;
+    flex: 1 1 100%;
+  }
+  .grid-cl-2 {
+    order: 3;
+  }
+  .grid-cl-3 {
+    order: 2;
+    flex: 1 1 100%;
+  }
+
+  .card-portrait {
+    flex: 1 1 100%;
   }
 }
 </style>
