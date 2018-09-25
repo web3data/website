@@ -1,4 +1,3 @@
-var chalk = require('chalk')
 var semver = require('semver')
 var packageConfig = require('../package.json')
 var shell = require('shelljs')
@@ -33,21 +32,16 @@ module.exports = function() {
       warnings.push(
         mod.name +
           ': ' +
-          chalk.red(mod.currentVersion) +
+          mod.currentVersion +
           ' should be ' +
-          chalk.green(mod.versionRequirement),
+          mod.versionRequirement,
       )
     }
   }
 
   if (warnings.length) {
     console.log('')
-    console.log(
-      chalk.yellow(
-        'To use this template, you must update following to modules:',
-      ),
-    )
-    console.log()
+    console.log('To use this template, you must update following to modules:\n')
     for (var i = 0; i < warnings.length; i++) {
       var warning = warnings[i]
       console.log('  ' + warning)
