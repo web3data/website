@@ -9,9 +9,11 @@ RUN wget https://s3.amazonaws.com/amberdata-repo-generic-us-east-1/aws-env && \
     chmod +x aws-env && chmod +x entrypoint.sh && \
     $(AWS_ENV_PATH=/${ENVTYPE}/${ENVID}/web3data-website/env AWS_REGION=us-east-1 ./aws-env) && \
     env && \
-    npm install --only=production && \
-    npm run build --only=production && \
+    npm install --no-optional && \
+    npm run build --no-optional && \
     rm -rf !$/.git*
+#    npm install --only=production && \
+#    npm run build --only=production && \
 
 FROM node:10.8-slim
 ENV ENVTYPE=${ENVTYPE}
