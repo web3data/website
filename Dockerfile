@@ -8,7 +8,7 @@ COPY . .
 RUN wget https://s3.amazonaws.com/amberdata-repo-generic-us-east-1/aws-env && \
     mv entrypoint.sh . && \
     chmod +x aws-env && chmod +x entrypoint.sh && \
-    $(AWS_ENV_PATH=/${ENVTYPE}/${ENVID}/amberlens/env AWS_REGION=us-east-1 ./aws-env) && \
+    $(AWS_ENV_PATH=/${ENVTYPE}/${ENVID}/website/env AWS_REGION=us-east-1 ./aws-env) && \
     env && \
     npm install --only=production && \
     npm run build --only=production && \
