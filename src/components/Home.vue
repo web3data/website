@@ -48,33 +48,6 @@
       </div>
     </section>
 
-    <section class="cta-form">
-      <div class="cta-card">
-        <div class="copy">
-          <h1>Invest in Web3Data</h1>
-          <h3>Gain early access to the token sale. Get validated as an investor</h3>
-        </div>
-        <div class="action">
-          <button class="btn">Request Access</button>
-        </div>
-      </div>
-
-      <div class="bk-doodle">
-        <css-doodle>
-          :doodle {
-          @grid: 20 / 100vmax;
-          font-family: sans-serif;
-          }
-
-          :after {
-          content: \@hex(@rand(0x2500, 0x257f));
-          color: hsla(@r(360), 70%, 70%, @r(.9));
-          font-size: 5vmax;
-          }
-        </css-doodle>
-      </div>
-    </section>
-
   </div>
 </template>
 

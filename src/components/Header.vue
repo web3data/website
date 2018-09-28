@@ -8,7 +8,7 @@
       </div>
 
       <div class="header-menu">
-        <a href="mailto:hello@web3data.org">
+        <a href="mailto:connect@web3data.org">
           <span>Contact Us</span>
         </a>
         <!-- <router-link :to="{name: 'list'}" tag="a">
